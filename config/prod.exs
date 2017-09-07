@@ -15,7 +15,6 @@ use Mix.Config
 # which you typically run after static files are built.
 config :phoenix_with_nextjs, PhoenixWithNextjsWeb.Endpoint,
   load_from_system_env: true,
-  cache_static_manifest: "priv/static/cache_manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
   watchers: [yarn: ["start", cd: Path.expand("../app", __DIR__)]]
 
