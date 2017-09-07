@@ -1,0 +1,16 @@
+{
+  "name": "phoenix_with_nextjs",
+  "version": "1.0.0",
+  "description": "NextJS app with server side rendering and Phoenix API",
+  "main": "index.js",
+  "author": "Valentin Mihov",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^3.2.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "exit_on_eof": "^1.0.4"
+  }
+}
