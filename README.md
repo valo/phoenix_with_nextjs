@@ -9,6 +9,7 @@ To start the app:
 
   * Install dependencies with `mix deps.get`
   * Install JS dependencies with `cd app && yarn && cd ..`
+  * Update your Postgres setup in `config/dev.exs`
   * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
   * Start Phoenix endpoint with `mix phx.server`
 
@@ -31,7 +32,7 @@ This ensures that the app can be easily indexed by web crawlers and render very 
 on mobile devices.
 
 You also define your API using Phoenix, which is a very fast, easy to develop
-framework, which is very similar to Ruby on Rails. Most people rolling such setup use node.js
+framework, very similar to Ruby on Rails. Most people rolling such setup use node.js
 as an API backend, which is not ideal when the backend starts scaling out and
 the complexity of the business logic increases.
 
