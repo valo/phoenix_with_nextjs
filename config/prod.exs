@@ -16,7 +16,8 @@ use Mix.Config
 config :phoenix_with_nextjs, PhoenixWithNextjsWeb.Endpoint,
   load_from_system_env: true,
   cache_static_manifest: "priv/static/cache_manifest.json",
-  secret_key_base: System.get_env("SECRET_KEY_BASE")
+  secret_key_base: System.get_env("SECRET_KEY_BASE"),
+  watchers: [yarn: ["start", cd: Path.expand("../app", __DIR__)]]
 
 # Do not print debug messages in production
 config :logger, level: :info
