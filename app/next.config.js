@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = {
   webpack: (cfg) => {
     cfg.plugins.push(
