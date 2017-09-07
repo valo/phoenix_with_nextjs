@@ -59,7 +59,7 @@ config :logger, level: :info
 #     config :phoenix_with_nextjs, PhoenixWithNextjsWeb.Endpoint, server: true
 #
 
-config :melodica_inventory, MelodicaInventory.Repo,
+config :phoenix_with_nextjs, PhoenixWithNextjs.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: System.get_env("DATABASE_URL"),
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
