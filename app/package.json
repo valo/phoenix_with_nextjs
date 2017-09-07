@@ -5,7 +5,13 @@
   "main": "index.js",
   "author": "Valentin Mihov",
   "license": "MIT",
+  "scripts": {
+    "dev": "node node_modules/exit_on_eof/index.js node_modules/next/dist/bin/next",
+    "build": "next build",
+    "start": "next start"
+  },
   "dependencies": {
+    "isomorphic-unfetch": "^2.0.0",
     "next": "^3.2.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"

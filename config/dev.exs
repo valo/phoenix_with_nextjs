@@ -11,7 +11,7 @@ config :phoenix_with_nextjs, PhoenixWithNextjsWeb.Endpoint,
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
-  watchers: []
+  watchers: [yarn: ["dev", cd: Path.expand("../app", __DIR__)]]
 
 # ## SSL Support
 #
@@ -44,3 +44,7 @@ config :phoenix_with_nextjs, PhoenixWithNextjs.Repo,
   database: "phoenix_with_nextjs_dev",
   hostname: "localhost",
   pool_size: 10
+
+if File.exists?("config/dev.secret.exs") do
+  import_config "dev.secret.exs"
+end
