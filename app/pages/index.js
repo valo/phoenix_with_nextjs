@@ -10,7 +10,7 @@ const Index = (props) => (
 )
 
 Index.getInitialProps = async function() {
-  const res = await fetch('http://localhost:4000/api/items')
+  const res = await fetch(process.env.WEBSITE_URL + '/api/items')
   const data = await res.json()
 
   return {
