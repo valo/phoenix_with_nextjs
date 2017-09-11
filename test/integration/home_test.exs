@@ -1,10 +1,17 @@
 defmodule Integartion.HomeTest do
-  use PhoenixWithNextjs.IntegrationCase
+  use PhoenixWithNextjs.IntegrationCase, async: false
 
-  test "rendering the home page" do
+  alias PhoenixWithNextjs.Item
+  alias PhoenixWithNextjs.Repo
+
+  test "viewing the list of items and navigating to the about page" do
+    %Item{name: "Milk"} |> Repo.insert
+
     navigate_to("http://localhost:3001/")
 
     assert find_element(:tag, "h1") |> inner_text == "Welcome to NextJS!"
+
+    assert find_element(:class, "todo_list") |> inner_text |> String.strip == "Milk"
 
     click({:id, "about"})
 

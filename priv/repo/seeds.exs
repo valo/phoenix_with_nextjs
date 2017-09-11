@@ -9,3 +9,7 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+PhoenixWithNextjs.Repo.insert!(%PhoenixWithNextjs.Item{name: "Milk"})
+PhoenixWithNextjs.Repo.insert!(%PhoenixWithNextjs.Item{name: "Butter"})
+PhoenixWithNextjs.Repo.insert!(%PhoenixWithNextjs.Item{name: "Bread"})

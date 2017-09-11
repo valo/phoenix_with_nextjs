@@ -12,11 +12,16 @@ defmodule PhoenixWithNextjs.IntegrationCase do
   end
 
   setup_all do
-    wait_for_js_server()
+    wait_for_node_server()
     :ok
   end
 
-  setup do
+  setup tags do
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(PhoenixWithNextjs.Repo)
+    unless tags[:async] do
+      Ecto.Adapters.SQL.Sandbox.mode(PhoenixWithNextjs.Repo, {:shared, self()})
+    end
+
     metadata = Phoenix.Ecto.SQL.Sandbox.metadata_for(PhoenixWithNextjs.Repo, self())
     Hound.start_session(
       metadata: metadata,
@@ -31,8 +36,7 @@ defmodule PhoenixWithNextjs.IntegrationCase do
     :ok
   end
 
-
-  defp wait_for_js_server do
+  defp wait_for_node_server do
     node_server_uri = URI.parse(Application.fetch_env!(:phoenix_with_nextjs, :node_server))
     case :gen_tcp.connect(node_server_uri.host |> String.to_charlist(), node_server_uri.port, []) do
       {:ok, socket} ->
@@ -40,7 +44,7 @@ defmodule PhoenixWithNextjs.IntegrationCase do
         true
       {:error, _} ->
         Process.sleep(500)
-        wait_for_js_server()
+        wait_for_node_server()
     end
   end
 end

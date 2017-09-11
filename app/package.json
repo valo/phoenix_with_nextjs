@@ -9,7 +9,7 @@
     "dev": "node node_modules/exit_on_eof/index.js node_modules/next/dist/bin/next",
     "build": "next build",
     "start": "next start",
-    "test-server": "WEBSITE_URL=http://localhost:4001 node node_modules/exit_on_eof/index.js 'node_modules/next/dist/bin/next -p 3001'"
+    "test-server": "WEBSITE_URL=http://localhost:4001 node node_modules/exit_on_eof/index.js 'node_modules/next/dist/bin/next -p 3001' > /dev/null"
   },
   "dependencies": {
     "isomorphic-unfetch": "^2.0.0",
