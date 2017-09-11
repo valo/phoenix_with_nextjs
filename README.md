@@ -27,20 +27,6 @@ All the JS code is in `app/`. The API code is in `lib/` and follows the phoenix 
 directory structure. You can find more info on how the JS side works on [Learning Next.js](https://learnnextjs.com). You can read more about how to define the API
 endpoints from the [Phoenix docs](https://hexdocs.pm/phoenix/overview.html) or from the excellent [Thoughtbot JSON API guide](https://robots.thoughtbot.com/building-a-phoenix-json-api)
 
-## Why this setup is awesome
-
-This setup allows to develop a React app with server side rendering out of the box.
-This ensures that the app can be easily indexed by web crawlers and render very quickly
-on mobile devices.
-
-You also define your API using Phoenix, which is a very fast, easy to develop
-framework, very similar to Ruby on Rails. Most people rolling such setup use node.js
-as an API backend, which is not ideal when the backend starts scaling out and
-the complexity of the business logic increases.
-
-Also this setup can be deployed very easily to services like Heroku and can run on
-a single dyno, which allows to run it easily on the free plans.
-
 ## Integration tests
 
 It is possible to write high level integration tests for the JS app using the `Hound`
@@ -79,3 +65,16 @@ heroku config:add WEBSITE_URL=<url_of_the_new_app>
 ```
 
 6. Deploy the app with `git push heroku`
+
+If you want to be really efficient and have gzip compression and HTTP/2, use a CDN service
+like [cloudflare](https://www.cloudflare.com) in front of your app.
+
+## Why?
+
+This application template includes the following features out of the box without the need of any configuration:
+
+* Phoenix API for defining business logic and exposing data
+* NextJS for writing the frontend using React-based components and routing
+* Server side rendering (SSR) of the frontend app out of the box
+* Integration testing framework, which allows to test the frontend app using headless chrome
+* Very easy deployment to Heroku and to any other hosting service, including features likes SSR
