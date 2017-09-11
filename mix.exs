@@ -40,7 +40,7 @@ defmodule PhoenixWithNextjs.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:reverse_proxy, git: "https://github.com/slogsdon/elixir-reverse-proxy"},
-      {:corsica, "~> 1.0"}
+      {:corsica, "~> 1.0", only: [:dev]}
     ]
   end
 
