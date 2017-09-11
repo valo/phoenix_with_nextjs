@@ -1,8 +1,5 @@
 defmodule Integartion.HomeTest do
-  use ExUnit.Case
-  use Hound.Helpers
-
-  hound_session()
+  use PhoenixWithNextjs.IntegrationCase
 
   test "rendering the home page" do
     navigate_to("http://localhost:4000/")
