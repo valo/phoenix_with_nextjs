@@ -3,8 +3,9 @@ use Mix.Config
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
 config :phoenix_with_nextjs, PhoenixWithNextjsWeb.Endpoint,
-  http: [port: 4001],
-  server: false
+  http: [port: 4000],
+  server: true,
+  watchers: [yarn: ["dev", cd: Path.expand("../app", __DIR__)]]
 
 # Print only warnings and errors during test
 config :logger, level: :warn
@@ -17,3 +18,5 @@ config :phoenix_with_nextjs, PhoenixWithNextjs.Repo,
   database: "phoenix_with_nextjs_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+config :hound, driver: "chrome_driver"

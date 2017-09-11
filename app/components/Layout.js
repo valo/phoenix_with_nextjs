@@ -5,8 +5,8 @@ export default (props) => (
     <h1>Welcome to NextJS!</h1>
     <nav>
       <ul>
-        <li><Link href="/"><a>Home</a></Link></li>
-        <li><Link href="/about"><a>About</a></Link></li>
+        <li><Link href="/"><a id="home">Home</a></Link></li>
+        <li><Link href="/about"><a id="about">About</a></Link></li>
       </ul>
     </nav>
     {props.children}
