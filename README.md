@@ -10,7 +10,7 @@ To start the app:
   * Install dependencies with `mix deps.get`
   * Install JS dependencies with `cd app && yarn && cd ..`
   * Update your Postgres setup in `config/dev.exs`
-  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
+  * Create and migrate your database with `mix ecto.setup`
   * Start Phoenix endpoint with `mix phx.server`
 
 Now you can visit [`localhost:3000`](http://localhost:3000) from your browser. Keep in
@@ -44,7 +44,7 @@ a single dyno, which allows to run it easily on the free plans.
 ## Integration tests
 
 It is possible to write high level integration tests for the JS app using the `Hound`
-integration testing framework. See the example test in `test/integration/home_test.exs`
+integration testing framework. See the integration test in `test/integration/home_test.exs`
 for an example of that. It is possible to setup the DB and click around the app using
 a headless chrome browser. In order to run the tests you need `chromedriver` installed.
 You can install the driver with:
