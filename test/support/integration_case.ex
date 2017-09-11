@@ -33,7 +33,8 @@ defmodule PhoenixWithNextjs.IntegrationCase do
 
 
   defp wait_for_js_server do
-    case :gen_tcp.connect('localhost', 3000, []) do
+    node_server_uri = URI.parse(Application.fetch_env!(:phoenix_with_nextjs, :node_server))
+    case :gen_tcp.connect(node_server_uri.host |> String.to_charlist(), node_server_uri.port, []) do
       {:ok, socket} ->
         :gen_tcp.close(socket)
         true

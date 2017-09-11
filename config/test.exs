@@ -3,9 +3,11 @@ use Mix.Config
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
 config :phoenix_with_nextjs, PhoenixWithNextjsWeb.Endpoint,
-  http: [port: 4000],
+  http: [port: 4001],
   server: true,
-  watchers: [yarn: ["dev", cd: Path.expand("../app", __DIR__)]]
+  watchers: [yarn: ["test-server", cd: Path.expand("../app", __DIR__)]]
+
+config :phoenix_with_nextjs, node_server: "http://localhost:3001"
 
 # Print only warnings and errors during test
 config :logger, level: :warn

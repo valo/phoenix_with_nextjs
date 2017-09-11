@@ -19,6 +19,6 @@ defmodule PhoenixWithNextjsWeb.Router do
   scope "/" do
     pipe_through [:nextjs]
 
-    get "/*path", ReverseProxy, upstream: ["localhost:3000"]
+    get "/*path", ReverseProxy, upstream: [Application.fetch_env!(:phoenix_with_nextjs, :node_server)]
   end
 end
