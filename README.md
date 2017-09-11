@@ -41,6 +41,24 @@ the complexity of the business logic increases.
 Also this setup can be deployed very easily to services like Heroku and can run on
 a single dyno, which allows to run it easily on the free plans.
 
+## Integration tests
+
+It is possible to write high level integration tests for the JS app using the `Hound`
+integration testing framework. See the example test in `test/integration/home_test.exs`
+for an example of that. It is possible to setup the DB and click around the app using
+a headless chrome browser. In order to run the tests you need `chromedriver` installed.
+You can install the driver with:
+
+```bash
+$ brew install chromedriver
+```
+
+and then you should run the driver with:
+
+```bash
+$ chromedriver
+```
+
 ## Deploying on Heroku
 
 You can deploy the app very easily to heroku following these steps:
