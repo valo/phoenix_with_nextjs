@@ -36,6 +36,9 @@ defmodule PhoenixWithNextjsWeb.Endpoint do
     key: "_phoenix_with_nextjs_key",
     signing_salt: "bfH+5EQ0"
 
+  if Mix.env == :dev do
+    plug Corsica, origins: "http://localhost:3000"
+  end
   plug PhoenixWithNextjsWeb.Router
 
   @doc """
