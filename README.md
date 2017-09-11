@@ -13,7 +13,9 @@ To start the app:
   * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
   * Start Phoenix endpoint with `mix phx.server`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Now you can visit [`localhost:3000`](http://localhost:3000) from your browser. Keep in
+mind that this is the address on which the node.js server is running. Using this URL
+ensures that the hot module reloading will work properly.
 
 This setup is going to start 2 processes:
   * A Phoenix server, which is routing the traffic and responding to API requests
@@ -59,9 +61,3 @@ heroku config:add WEBSITE_URL=<url_of_the_new_app>
 ```
 
 6. Deploy the app with `git push heroku`
-
-## Issues:
-
-* Hot module reloading is not working properly at the moment, because I haven't figured out
-how to reverse proxy the WebSocket connection used by the HMR webpack plugin. Once this is
-fixed the HMR will work.
