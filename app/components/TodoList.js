@@ -3,7 +3,7 @@ import Layout from '../components/Layout.js'
 export default (props) => (
   <ul>
     {props.items.map((item) => (
-      <li>
+      <li key={item}>
         {item}
       </li>
     ))}

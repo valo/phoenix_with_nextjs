@@ -17,6 +17,8 @@ config :phoenix_with_nextjs, PhoenixWithNextjsWeb.Endpoint,
   pubsub: [name: PhoenixWithNextjs.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
+config :phoenix_with_nextjs, node_server: "http://localhost:3000"
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
