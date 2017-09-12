@@ -20,7 +20,6 @@ mv lib/$SKELETON_PROJECT_NAME\_web lib/$NEW_PROJECT_NAME\_web
 mv lib/$SKELETON_PROJECT_NAME.ex lib/$NEW_PROJECT_NAME.ex
 
 rm -fr .git/
-rm .gitignore
 
 cd ..
 
