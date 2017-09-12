@@ -11,7 +11,7 @@ defmodule Integartion.HomeTest do
 
     assert find_element(:tag, "h1") |> inner_text == "Welcome to NextJS!"
 
-    assert find_element(:class, "todo_list") |> inner_text |> String.strip == "Milk"
+    assert find_element(:class, "todo_list") |> inner_text |> String.trim == "Milk"
 
     click({:id, "about"})
 
