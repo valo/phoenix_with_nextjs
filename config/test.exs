@@ -5,7 +5,10 @@ use Mix.Config
 config :phoenix_with_nextjs, PhoenixWithNextjsWeb.Endpoint,
   http: [port: 4001],
   server: true,
-  watchers: [yarn: ["test-server", cd: Path.expand("../app", __DIR__)]]
+  watchers: [
+    yarn: ["test-server", cd: Path.expand("../app", __DIR__)],
+    node: ["app/node_modules/exit_on_eof/index.js", "chromedriver"]
+  ]
 
 config :phoenix_with_nextjs, node_server: "http://localhost:3001"
 

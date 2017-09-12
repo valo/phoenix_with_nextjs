@@ -39,11 +39,14 @@ You can install the driver with:
 $ brew install chromedriver
 ```
 
-and then you should run the driver with:
+you can run the default tests with
 
 ```bash
-$ chromedriver
+$ mix test
 ```
+
+This mix task is going to automatically run the `chromedriver` and the node server,
+which are needed to run the tests.
 
 ## Deploying on Heroku
 
