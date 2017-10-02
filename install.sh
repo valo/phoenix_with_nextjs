@@ -2,7 +2,7 @@
 
 if [ -z "$1" ]; then
   echo "No project name specified"
-  echo "Usage: curl -s https://raw.githubusercontent.com/valo/phoenix_with_nextjs/add_install_script/install.sh | bash -s <PROJECT_NAME>"
+  echo "Usage: bash <(curl -s https://raw.githubusercontent.com/valo/phoenix_with_nextjs/add_install_script/install.sh) <PROJECT_NAME>"
   exit 1
 fi
 
