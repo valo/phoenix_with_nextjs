@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ -z "$1" ]; then
+  echo "No project name specified"
+  echo "Usage: curl https://raw.githubusercontent.com/valo/phoenix_with_nextjs/add_install_script/install.sh | bash -s <PROJECT_NAME>"
+  exit 1
+fi
+
 set -e
 
 GITHUB_SRC='git@github.com:valo/phoenix_with_nextjs.git'
