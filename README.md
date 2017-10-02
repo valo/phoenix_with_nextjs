@@ -5,8 +5,19 @@ This is a skeleton of a [Phoenix](http://phoenixframework.org) application, whic
 implementing the API. The app uses server side rendering out of the box and can be
 deployed on heroku with several very simple steps.
 
+## Creating a new project
+
+To create a new project, run the following command:
+
+```bash
+bash <(curl https://raw.githubusercontent.com/valo/phoenix_with_nextjs/add_install_script/install.sh) <PROJECT_NAME>
+```
+
+Replace `<PROJECT_NAME>` with the name of your project. The script will create a folder with the same name for your project.
+
 To start the app:
 
+  * Go in the folder of the app `cd <PROJECT_NAME>`
   * Install dependencies with `mix deps.get`
   * Install JS dependencies with `cd app && yarn && cd ..`
   * Update your Postgres setup in `config/dev.exs`
