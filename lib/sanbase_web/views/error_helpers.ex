@@ -1,4 +1,4 @@
-defmodule PhoenixWithNextjsWeb.ErrorHelpers do
+defmodule SanbaseWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -21,9 +21,9 @@ defmodule PhoenixWithNextjsWeb.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(PhoenixWithNextjsWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(SanbaseWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(PhoenixWithNextjsWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(SanbaseWeb.Gettext, "errors", msg, opts)
     end
   end
 end

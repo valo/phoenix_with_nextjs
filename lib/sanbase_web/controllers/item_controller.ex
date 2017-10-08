@@ -1,6 +1,6 @@
-defmodule PhoenixWithNextjsWeb.ItemController do
-  use PhoenixWithNextjsWeb, :controller
-  alias PhoenixWithNextjs.{Item, Repo}
+defmodule SanbaseWeb.ItemController do
+  use SanbaseWeb, :controller
+  alias Sanbase.{Item, Repo}
 
   def index(conn, _params) do
     item_names = Repo.all(Item)

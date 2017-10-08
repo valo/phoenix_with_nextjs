@@ -1,12 +1,12 @@
-defmodule PhoenixWithNextjsWeb do
+defmodule SanbaseWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use PhoenixWithNextjsWeb, :controller
-      use PhoenixWithNextjsWeb, :view
+      use SanbaseWeb, :controller
+      use SanbaseWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,24 +19,24 @@ defmodule PhoenixWithNextjsWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: PhoenixWithNextjsWeb
+      use Phoenix.Controller, namespace: SanbaseWeb
       import Plug.Conn
-      import PhoenixWithNextjsWeb.Router.Helpers
-      import PhoenixWithNextjsWeb.Gettext
+      import SanbaseWeb.Router.Helpers
+      import SanbaseWeb.Gettext
     end
   end
 
   def view do
     quote do
-      use Phoenix.View, root: "lib/phoenix_with_nextjs_web/templates",
-                        namespace: PhoenixWithNextjsWeb
+      use Phoenix.View, root: "lib/sanbase_web/templates",
+                        namespace: SanbaseWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
 
-      import PhoenixWithNextjsWeb.Router.Helpers
-      import PhoenixWithNextjsWeb.ErrorHelpers
-      import PhoenixWithNextjsWeb.Gettext
+      import SanbaseWeb.Router.Helpers
+      import SanbaseWeb.ErrorHelpers
+      import SanbaseWeb.Gettext
     end
   end
 
@@ -51,7 +51,7 @@ defmodule PhoenixWithNextjsWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import PhoenixWithNextjsWeb.Gettext
+      import SanbaseWeb.Gettext
     end
   end
 

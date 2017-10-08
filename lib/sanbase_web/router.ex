@@ -1,5 +1,5 @@
-defmodule PhoenixWithNextjsWeb.Router do
-  use PhoenixWithNextjsWeb, :router
+defmodule SanbaseWeb.Router do
+  use SanbaseWeb, :router
 
   pipeline :api do
     plug :accepts, ["json"]
@@ -10,7 +10,7 @@ defmodule PhoenixWithNextjsWeb.Router do
     plug :put_secure_browser_headers
   end
 
-  scope "/api", PhoenixWithNextjsWeb do
+  scope "/api", SanbaseWeb do
     pipe_through :api
 
     resources "/items", ItemController, only: [:index]
@@ -19,6 +19,6 @@ defmodule PhoenixWithNextjsWeb.Router do
   scope "/" do
     pipe_through [:nextjs]
 
-    get "/*path", ReverseProxy, upstream: [Application.fetch_env!(:phoenix_with_nextjs, :node_server)]
+    get "/*path", ReverseProxy, upstream: [Application.fetch_env!(:sanbase, :node_server)]
   end
 end

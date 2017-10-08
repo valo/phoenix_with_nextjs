@@ -1,4 +1,4 @@
-defmodule PhoenixWithNextjs.Item do
+defmodule Sanbase.Item do
   use Ecto.Schema
 
   schema "items" do

@@ -1,5 +1,5 @@
-defmodule PhoenixWithNextjs.Repo do
-  use Ecto.Repo, otp_app: :phoenix_with_nextjs
+defmodule Sanbase.Repo do
+  use Ecto.Repo, otp_app: :sanbase
 
   @doc """
   Dynamically loads the repository url from the

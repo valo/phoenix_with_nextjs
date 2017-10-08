@@ -1,6 +1,6 @@
-defmodule PhoenixWithNextjs do
+defmodule Sanbase do
   @moduledoc """
-  PhoenixWithNextjs keeps the contexts that define your domain
+  Sanbase keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

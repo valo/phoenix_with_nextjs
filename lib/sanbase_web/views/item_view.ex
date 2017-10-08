@@ -1,5 +1,5 @@
-defmodule PhoenixWithNextjsWeb.ItemView do
-  use PhoenixWithNextjsWeb, :view
+defmodule SanbaseWeb.ItemView do
+  use SanbaseWeb, :view
 
   def render("index.json", %{items: items}) do
     %{

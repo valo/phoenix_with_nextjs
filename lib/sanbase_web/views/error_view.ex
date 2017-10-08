@@ -1,5 +1,5 @@
-defmodule PhoenixWithNextjsWeb.ErrorView do
-  use PhoenixWithNextjsWeb, :view
+defmodule SanbaseWeb.ErrorView do
+  use SanbaseWeb, :view
 
   def render("404.json", _assigns) do
     %{errors: %{detail: "Page not found"}}

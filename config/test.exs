@@ -2,7 +2,7 @@ use Mix.Config
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :phoenix_with_nextjs, PhoenixWithNextjsWeb.Endpoint,
+config :sanbase, SanbaseWeb.Endpoint,
   http: [port: 4001],
   server: true,
   watchers: [
@@ -10,17 +10,17 @@ config :phoenix_with_nextjs, PhoenixWithNextjsWeb.Endpoint,
     node: ["app/node_modules/exit_on_eof/index.js", "chromedriver"]
   ]
 
-config :phoenix_with_nextjs, node_server: "http://localhost:3001"
+config :sanbase, node_server: "http://localhost:3001"
 
 # Print only warnings and errors during test
 config :logger, level: :warn
 
 # Configure your database
-config :phoenix_with_nextjs, PhoenixWithNextjs.Repo,
+config :sanbase, Sanbase.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "phoenix_with_nextjs_test",
+  database: "sanbase_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
 
