@@ -1,4 +1,4 @@
-defmodule PhoenixWithNextjsWeb.ChannelCase do
+defmodule SanbaseWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -21,15 +21,15 @@ defmodule PhoenixWithNextjsWeb.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint PhoenixWithNextjsWeb.Endpoint
+      @endpoint SanbaseWeb.Endpoint
     end
   end
 
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(PhoenixWithNextjs.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Sanbase.Repo)
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(PhoenixWithNextjs.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Sanbase.Repo, {:shared, self()})
     end
     :ok
   end

@@ -1,4 +1,4 @@
-defmodule PhoenixWithNextjs.IntegrationCase do
+defmodule Sanbase.IntegrationCase do
   use ExUnit.CaseTemplate
 
   @moduledoc false
@@ -17,12 +17,12 @@ defmodule PhoenixWithNextjs.IntegrationCase do
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(PhoenixWithNextjs.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Sanbase.Repo)
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(PhoenixWithNextjs.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Sanbase.Repo, {:shared, self()})
     end
 
-    metadata = Phoenix.Ecto.SQL.Sandbox.metadata_for(PhoenixWithNextjs.Repo, self())
+    metadata = Phoenix.Ecto.SQL.Sandbox.metadata_for(Sanbase.Repo, self())
     Hound.start_session(
       metadata: metadata,
       additional_capabilities: %{
@@ -37,7 +37,7 @@ defmodule PhoenixWithNextjs.IntegrationCase do
   end
 
   defp wait_for_node_server do
-    node_server_uri = URI.parse(Application.fetch_env!(:phoenix_with_nextjs, :node_server))
+    node_server_uri = URI.parse(Application.fetch_env!(:sanbase, :node_server))
     case :gen_tcp.connect(node_server_uri.host |> String.to_charlist(), node_server_uri.port, []) do
       {:ok, socket} ->
         :gen_tcp.close(socket)

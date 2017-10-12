@@ -1,9 +1,9 @@
-defmodule PhoenixWithNextjs.Mixfile do
+defmodule Sanbase.Mixfile do
   use Mix.Project
 
   def project do
     [
-      app: :phoenix_with_nextjs,
+      app: :sanbase,
       version: "0.0.1",
       elixir: "~> 1.4",
       elixirc_paths: elixirc_paths(Mix.env),
@@ -19,7 +19,7 @@ defmodule PhoenixWithNextjs.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {PhoenixWithNextjs.Application, []},
+      mod: {Sanbase.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -42,6 +42,8 @@ defmodule PhoenixWithNextjs.Mixfile do
       {:reverse_proxy, git: "https://github.com/slogsdon/elixir-reverse-proxy"},
       {:corsica, "~> 1.0", only: [:dev]},
       {:hound, "~> 1.0", only: [:test]},
+      {:tesla, "~> 0.9.0"},
+      {:poison, ">= 1.0.0"}
     ]
   end
 

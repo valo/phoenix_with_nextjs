@@ -1,8 +1,8 @@
 defmodule Integartion.HomeTest do
-  use PhoenixWithNextjs.IntegrationCase, async: false
+  use Sanbase.IntegrationCase, async: false
 
-  alias PhoenixWithNextjs.Item
-  alias PhoenixWithNextjs.Repo
+  alias Sanbase.Item
+  alias Sanbase.Repo
 
   test "viewing the list of items and navigating to the about page" do
     %Item{name: "Milk"} |> Repo.insert

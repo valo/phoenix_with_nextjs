@@ -1,4 +1,4 @@
-defmodule PhoenixWithNextjs.Repo.Migrations.CreateItems do
+defmodule Sanbase.Repo.Migrations.CreateItems do
   use Ecto.Migration
 
   def change do

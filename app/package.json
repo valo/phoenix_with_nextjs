@@ -1,5 +1,5 @@
 {
-  "name": "phoenix_with_nextjs",
+  "name": "sanbase",
   "version": "1.0.0",
   "description": "NextJS app with server side rendering and Phoenix API",
   "main": "index.js",

@@ -6,18 +6,18 @@
 use Mix.Config
 
 # General application configuration
-config :phoenix_with_nextjs,
-  ecto_repos: [PhoenixWithNextjs.Repo]
+config :sanbase,
+  ecto_repos: [Sanbase.Repo]
 
 # Configures the endpoint
-config :phoenix_with_nextjs, PhoenixWithNextjsWeb.Endpoint,
+config :sanbase, SanbaseWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "Vq7Rfo0T4EfiLX2/ryYal3O0l9ebBNhyh58cfWdTAUHxEJGu2p9u1WTQ31Ki4Phj",
-  render_errors: [view: PhoenixWithNextjsWeb.ErrorView, accepts: ~w(json)],
-  pubsub: [name: PhoenixWithNextjs.PubSub,
+  render_errors: [view: SanbaseWeb.ErrorView, accepts: ~w(json)],
+  pubsub: [name: Sanbase.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
-config :phoenix_with_nextjs, node_server: "http://localhost:3000"
+config :sanbase, node_server: "http://localhost:3000"
 
 # Configures Elixir's Logger
 config :logger, :console,
