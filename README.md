@@ -10,7 +10,7 @@ deployed on heroku with several very simple steps.
 To create a new project, run the following command:
 
 ```bash
-bash <(curl https://raw.githubusercontent.com/valo/phoenix_with_nextjs/add_install_script/install.sh) <PROJECT_NAME>
+bash <(curl https://raw.githubusercontent.com/valo/phoenix_with_nextjs/master/install.sh) <PROJECT_NAME>
 ```
 
 Replace `<PROJECT_NAME>` with the name of your project. The script will create a folder with the same name for your project.
