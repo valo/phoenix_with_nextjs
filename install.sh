@@ -2,13 +2,13 @@
 
 if [ -z "$1" ]; then
   echo "No project name specified"
-  echo "Usage: bash <(curl -s https://raw.githubusercontent.com/valo/phoenix_with_nextjs/add_install_script/install.sh) <PROJECT_NAME>"
+  echo "Usage: bash <(curl -s https://raw.githubusercontent.com/valo/phoenix_with_nextjs/master/install.sh) <PROJECT_NAME>"
   exit 1
 fi
 
 set -e
 
-GITHUB_SRC='git@github.com:valo/phoenix_with_nextjs.git'
+GITHUB_SRC='https://github.com/valo/phoenix_with_nextjs.git'
 SKELETON_MODULE_NAME="PhoenixWithNextjs"
 SKELETON_PROJECT_NAME="phoenix_with_nextjs"
 
